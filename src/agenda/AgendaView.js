@@ -561,6 +561,8 @@ function AgendaView(element, calendar, viewName) {
 		var html = '';
 		for (var i=0; i < annotations.length; i++) {
 			var ann = annotations[i];
+			ann.start = parseDate(ann.start, ignoreTimezone);
+			ann.end = parseDate(ann.end, ignoreTimezone);
 			if (ann.start >= this.start && ann.end <= this.end) {
 				var top = timePosition(ann.start, ann.start);
 				var bottom = timePosition(ann.end, ann.end);
