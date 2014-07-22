@@ -7,6 +7,7 @@ function ResourceDayView(element, calendar) {
 	
 	// exports
 	t.render = render;
+	t.renderAnnotations = function () {};
 	
 	
 	// imports
